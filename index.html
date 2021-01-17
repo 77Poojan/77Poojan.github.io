@@ -50,9 +50,19 @@
             <p>Hello, my name is Pujan Bade. I am a Developer and also a Designer. If you have any project or if you want a software for your company contact me.</p>
 
             <button>Download CV</button>
+            <p>
+                Checkout my github Profile : <a id="githubLink">Github</a>
+            </p>
         </div>
     </div>
-
+    <script>
+        fetch("https://api.github.com/users/77Poojan")
+            .then(response => response.json())
+            .then(function(data) {
+                console.log(data)
+                document.getElementById('githubLink').href = data['html_url']
+            })
+    </script>
     <!--footer--------------->
     <footer>
         <!--heading-->
